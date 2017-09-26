@@ -1,0 +1,23 @@
+# YU configuration options
+
+config MACH_YU
+	bool "YU device"
+	depends on ARCH_MSM
+	help
+	  Support for YU products
+
+config MACH_YU_MSM8953
+	bool "YU MSM8953"
+	depends on ARCH_MSM8953
+	help
+	  Support for MSM8953 YU variants
+
+menu "YU board selection"
+
+config MACH_YU_YU5551
+	bool "YU5551 board"
+	select MACH_XIAOMI_MSM8953
+	help
+	  Support for YUREKA-2 (YU5551)
+
+endmenu
