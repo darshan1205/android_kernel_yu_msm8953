@@ -156,6 +156,10 @@ dtb-$(CONFIG_ARCH_MSM8940) += msm8940-pmi8937-cdp.dtb \
 	msm8940-pmi8940-cdp.dtb \
 	msm8940-pmi8940-rcm.dtb
 
+ifeq ($(CONFIG_MACH_YU_MSM8953),y)
+dtb-$(CONFIG_MACH_YU_YU5551) += \
+	msm8953-qrd-wt89536.dtb
+else
 dtb-$(CONFIG_ARCH_MSM8953) += msm8953-sim.dtb \
 	msm8953-rumi.dtb \
 	msm8953-cdp.dtb \
@@ -168,6 +172,7 @@ dtb-$(CONFIG_ARCH_MSM8953) += msm8953-sim.dtb \
 	apq8053-mtp.dtb \
 	apq8053-ext-audio-mtp.dtb \
 	msm8953-cdp-1200p.dtb
+endif
 
 dtb-$(CONFIG_ARCH_MDM9607) += mdm9607-rumi.dtb \
 	mdm9607-cdp.dtb \
